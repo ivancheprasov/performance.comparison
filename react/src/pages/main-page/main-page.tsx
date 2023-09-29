@@ -3,15 +3,15 @@
 import { Card, Table } from 'antd';
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
-import Loader from "../../components/Loader";
+import Loader from "../../components/loader/loader";
 import { CLIENT_STANDARD_DATE, NO_SEARCH_RESULTS, SORT_DIRECTIONS } from '../../constants/table';
-import { generateReservations } from '../../utils/generateReservations';
+import { generateReservations } from '../../utils/generate-reservations';
 import { useNavigate } from 'react-router-dom';
-import { ROUTES } from "../../constants/routes";
+import { AppRoutes } from "../../types/routes";
 
 const reservations = generateReservations();
 
-export default function Reservations() {
+export default function MainPage() {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
 
@@ -20,7 +20,7 @@ export default function Reservations() {
     if (savedUsername) {
       setUsername(savedUsername);
     } else {
-      navigate(ROUTES.WELCOME);
+      navigate(AppRoutes.SignIn);
     }
   }, [navigate]);
 

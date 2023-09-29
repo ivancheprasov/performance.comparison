@@ -1,8 +1,8 @@
 'use client';
 
 import { Button, Card, Form, Input } from 'antd';
-import { useRouter } from 'next/navigation';
-import { AppRoutes } from "../lib/types/routes";
+import { useNavigate } from 'react-router-dom';
+import { AppRoutes } from "../../types/routes";
 
 interface FormValues {
   firstName: string;
@@ -10,12 +10,12 @@ interface FormValues {
   password: string;
 }
 
-export default function Page() {
-  const router = useRouter();
+export default function SignInPage() {
+  const navigate = useNavigate();
 
   function handleSubmit({ firstName, lastName }: FormValues) {
     sessionStorage.setItem('username', `${firstName} ${lastName}`);
-    router.push(AppRoutes.Main);
+    navigate(AppRoutes.Main);
   }
 
   return (
