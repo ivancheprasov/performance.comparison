@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "startReact": "react-scripts start",
+    "buildReact": "react-scripts build",
+    "prodReact": "sudo yarn global add serve && serve -s build"
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",

@@ -1,7 +1,7 @@
 import { App } from 'antd';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import Router from './Router';
+import Router from './router';
 
 const rootNode = document.getElementById('root');
 

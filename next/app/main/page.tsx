@@ -4,9 +4,10 @@ import { Card, Table } from 'antd';
 import dayjs from 'dayjs';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Loader from "../components/Loader/Loader";
+import Loader from "../components/loader/loader";
 import { CLIENT_STANDARD_DATE, NO_SEARCH_RESULTS, SORT_DIRECTIONS } from '../lib/constants/table';
-import { generateReservations } from '../lib/utils/generateReservations';
+import { AppRoutes } from "../lib/types/routes";
+import { generateReservations } from '../lib/utils/generate-reservations';
 
 const reservations = generateReservations();
 
@@ -19,7 +20,7 @@ export default function Page() {
     if (savedUsername) {
       setUsername(savedUsername);
     } else {
-      router.push('/');
+      router.push(AppRoutes.SignIn);
     }
   }, [router]);
 
