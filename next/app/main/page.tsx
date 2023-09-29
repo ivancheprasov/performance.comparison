@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Loader from "../components/Loader/Loader";
 import { CLIENT_STANDARD_DATE, NO_SEARCH_RESULTS, SORT_DIRECTIONS } from '../lib/constants/table';
+import { AppRoutes } from "../lib/types/routes";
 import { generateReservations } from '../lib/utils/generateReservations';
 
 const reservations = generateReservations();
@@ -19,7 +20,7 @@ export default function Page() {
     if (savedUsername) {
       setUsername(savedUsername);
     } else {
-      router.push('/');
+      router.push(AppRoutes.SignIn);
     }
   }, [router]);
 

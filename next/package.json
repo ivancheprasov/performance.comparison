@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "devNext": "next dev",
+    "buildNext": "next build",
+    "startNext": "next start",
+    "lintNext": "next lint --fix"
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.17.0",
