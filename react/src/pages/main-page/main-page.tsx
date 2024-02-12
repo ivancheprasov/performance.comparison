@@ -40,12 +40,16 @@ export default function MainPage() {
         locale={{ emptyText: NO_SEARCH_RESULTS }}
         rowKey="id"
         dataSource={reservations}
+        scroll={{ y: 550 }}
+        virtual
+        pagination={false}
       >
         <Table.Column title="Status" dataIndex="status" sorter ellipsis width={160} />
         <Table.Column
           title="Confirmation Number"
           dataIndex="confirmationNumber"
           defaultSortOrder={SORT_DIRECTIONS.ascend}
+          sorter
           width={400}
         />
         <Table.Column title="Arrival" dataIndex="arrival" sorter render={renderDateColumn} width={120} />

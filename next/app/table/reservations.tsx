@@ -1,19 +1,19 @@
 'use client';
 
+import { useQuery } from '@tanstack/react-query';
 import { Card, Table } from 'antd';
 import dayjs from 'dayjs';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Loader from "../components/loader/loader";
-import { CLIENT_STANDARD_DATE, NO_SEARCH_RESULTS, SORT_DIRECTIONS } from '../lib/constants/table';
-import { AppRoutes } from "../lib/types/routes";
-import { generateReservations } from '../lib/utils/generate-reservations';
+import Loader from '../components/loader/loader';
+import Api from '../lib/api/api';
+import { CLIENT_STANDARD_DATE, NO_SEARCH_RESULTS, SERVER_STANDARD_DATE, SORT_DIRECTIONS } from '../lib/constants/table';
+import { AppRoutes } from '../lib/types/routes';
 
-const reservations = generateReservations();
-
-export default function Page() {
+export default function Reservations() {
   const router = useRouter();
   const [username, setUsername] = useState('');
+  const { data: reservations } = useQuery({ queryKey: ['getReservations'], queryFn: Api.getReservations });
 
   useEffect(() => {
     const savedUsername = sessionStorage.getItem('username');
@@ -25,7 +25,7 @@ export default function Page() {
   }, [router]);
 
   function renderDateColumn(record: Date) {
-    return dayjs(record).format(CLIENT_STANDARD_DATE);
+    return dayjs(record, SERVER_STANDARD_DATE).format(CLIENT_STANDARD_DATE);
   }
 
   if (!username) return <Loader />;
@@ -40,12 +40,16 @@ export default function Page() {
         locale={{ emptyText: NO_SEARCH_RESULTS }}
         rowKey="id"
         dataSource={reservations}
+        scroll={{ y: 550 }}
+        virtual
+        pagination={false}
       >
         <Table.Column title="Status" dataIndex="status" sorter ellipsis width={160} />
         <Table.Column
           title="Confirmation Number"
           dataIndex="confirmationNumber"
           defaultSortOrder={SORT_DIRECTIONS.ascend}
+          sorter
           width={400}
         />
         <Table.Column title="Arrival" dataIndex="arrival" sorter render={renderDateColumn} width={120} />

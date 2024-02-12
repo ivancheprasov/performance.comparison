@@ -1,4 +1,4 @@
-export const DEFAULT_DATA_COUNT = 100;
+export const DEFAULT_DATA_COUNT = 1000;
 export const SEED_NUMBER = 12345;
 
 export const SMALL_NUMBER_RANGE = { min: 1, max: 10 };

@@ -7,4 +7,5 @@ export const SORT_DIRECTIONS: { [key: string]: SortOrder } = {
   descend: 'descend',
 };
 
+export const SERVER_STANDARD_DATE = 'YYYY-MM-DD';
 export const CLIENT_STANDARD_DATE = 'MMM DD, YYYY';

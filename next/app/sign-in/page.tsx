@@ -15,7 +15,7 @@ export default function Page() {
 
   function handleSubmit({ firstName, lastName }: FormValues) {
     sessionStorage.setItem('username', `${firstName} ${lastName}`);
-    router.push(AppRoutes.Main);
+    router.push(AppRoutes.Table);
   }
 
   return (
