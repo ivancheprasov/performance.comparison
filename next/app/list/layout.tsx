@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import React from 'react';
-import AntdRegistry from '../components/antd-registry/antd-registry';
+import DefaultProviders from "../components/default-providers/default-providers";
 
 export default function PageLayout({ children }: { children: ReactNode }) {
-  return <AntdRegistry>{children}</AntdRegistry>;
+  return <DefaultProviders>{children}</DefaultProviders>;
 }

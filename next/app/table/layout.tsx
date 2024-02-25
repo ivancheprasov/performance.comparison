@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import React from 'react';
-import Providers from "./providers";
+import DefaultProviders from "../components/default-providers/default-providers";
 
 export default function PageLayout({ children }: { children: ReactNode }) {
-  return <Providers>{children}</Providers>;
+  return <DefaultProviders>{children}</DefaultProviders>;
 }

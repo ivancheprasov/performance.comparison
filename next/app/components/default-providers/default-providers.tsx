@@ -3,9 +3,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { ReactNode } from 'react';
 import React from 'react';
-import AntdRegistry from '../components/antd-registry/antd-registry';
+import AntdRegistry from '../antd-registry/antd-registry';
 
-export default function Providers({ children }: { children: ReactNode }) {
+export default function DefaultProviders({ children }: { children: ReactNode }) {
   const [queryClient] = React.useState(() => new QueryClient());
 
   return (
