@@ -1,26 +1,33 @@
 'use client'
 
-import { Menu } from "antd";
+import { Menu, MenuProps } from "antd";
 import Link from "next/link";
 import { AppRoutes } from "../../lib/types/routes";
+import styles from "./navigation-menu.module.scss";
+
+const items: MenuProps['items'] = [
+  {
+    label: <Link href={AppRoutes.Welcome}>Welcome</Link>,
+    key: AppRoutes.Welcome,
+  },
+  {
+    label: <Link href={AppRoutes.SignIn}>Sign In</Link>,
+    key: AppRoutes.SignIn,
+  },
+  {
+    label: <Link href={AppRoutes.List}>List</Link>,
+    key: AppRoutes.List,
+  },
+  {
+    label: <Link href={AppRoutes.Table}>Table</Link>,
+    key: AppRoutes.Table,
+  },
+];
 
 export default function NavigationMenu() {
   return (
-    <nav>
-      <Menu mode="horizontal">
-        <Menu.Item itemID={AppRoutes.Welcome}>
-          <Link href={AppRoutes.Welcome}>Welcome</Link>
-        </Menu.Item>
-        <Menu.Item itemID={AppRoutes.SignIn}>
-          <Link href={AppRoutes.SignIn}>Sign In</Link>
-        </Menu.Item>
-        <Menu.Item itemID={AppRoutes.Table}>
-          <Link href={AppRoutes.Table}>Table</Link>
-        </Menu.Item>
-        <Menu.Item itemID={AppRoutes.List}>
-          <Link href={AppRoutes.List}>List</Link>
-        </Menu.Item>
-      </Menu>
+    <nav className={styles.menu}>
+      <Menu mode="horizontal" items={items}/>
     </nav>
   );
 }

@@ -5,12 +5,13 @@ import { List } from 'antd';
 import Api from '../lib/api/api';
 import Image from 'next/image';
 import VirtualList from 'rc-virtual-list';
-import avatarOne from '../images/avatar-1.png';
-import avatarTwo from '../images/avatar-2.png';
-import avatarThree from '../images/avatar-3.png';
-import avatarFour from '../images/avatar-4.png';
+import avatarOne from '../../public/images/avatar-1.png';
+import avatarTwo from '../../public/images/avatar-2.png';
+import avatarThree from '../../public/images/avatar-3.png';
+import avatarFour from '../../public/images/avatar-4.png';
 import { User } from '../lib/types/user';
 import Loader from "../components/loader/loader";
+import styles from "./users.module.scss";
 
 const AVATAR_ARRAY = [avatarOne, avatarTwo, avatarThree, avatarFour];
 
@@ -21,8 +22,8 @@ export default function Users() {
 
   return (
     <main>
-      <List itemLayout="horizontal">
-        <VirtualList data={users} height={500} itemHeight={50} itemKey="id">
+      <List itemLayout="horizontal" className={styles.list} header={<h1>Users</h1>}>
+        <VirtualList data={users} height={600} itemKey='id' itemHeight={60}>
           {(item: User) => (
             <List.Item>
               <List.Item.Meta
