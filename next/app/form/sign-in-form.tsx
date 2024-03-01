@@ -1,7 +1,6 @@
 'use client';
 
 import { Button, Card, Form, Input, notification } from 'antd';
-import { StorageKeys } from '../lib/types/storage';
 import { REQUIRED_FIELD } from '../lib/constants/rule';
 import styles from './sign-in-form.module.scss';
 import { useMutation } from '@tanstack/react-query';
@@ -30,9 +29,8 @@ export default function SignInForm() {
     onError: () => openNotification(NotificationTypes.Error),
   });
 
-  function handleSubmit({ firstName, lastName, password }: UserFormValues) {
-    sessionStorage.setItem(StorageKeys.Username, `${firstName} ${lastName}`);
-    signIn({ firstName, lastName, password });
+  function handleSubmit(values: UserFormValues) {
+    signIn(values);
   }
 
   return (
