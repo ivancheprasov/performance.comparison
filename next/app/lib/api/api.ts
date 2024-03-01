@@ -22,7 +22,15 @@ abstract class Api {
     });
   }
 
-  public static async signIn(_values: UserFormValues): Promise<void> {
+  public static async signIn(values: UserFormValues): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 1000);
+    });
+  }
+
+  public static async signOut(): Promise<void> {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve();
