@@ -1,8 +1,8 @@
 'use server'
 
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
-import Api from "../lib/api/api";
-import getQueryClient from '../lib/utils/get-query-client';
+import Api from "../../lib/api/api";
+import getQueryClient from '../../lib/utils/get-query-client';
 import Reservations from "./reservations";
 
 export default async function HydratedReservations() {
