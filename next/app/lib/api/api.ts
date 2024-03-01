@@ -1,7 +1,7 @@
 import { Reservation } from "../types/reservation";
 import { generateReservations } from "../utils/generate-reservations";
 import { generateUsers } from "../utils/generate-users";
-import { User } from "../types/user";
+import { User, UserFormValues } from "../types/user";
 
 abstract class Api {
   public static async getReservations(): Promise<Reservation[]> {
@@ -18,6 +18,22 @@ abstract class Api {
       const users = generateUsers();
       setTimeout(() => {
         resolve(users);
+      }, 1000);
+    });
+  }
+
+  public static async signIn(values: UserFormValues): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 1000);
+    });
+  }
+
+  public static async signOut(): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
       }, 1000);
     });
   }

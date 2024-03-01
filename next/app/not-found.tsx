@@ -6,7 +6,7 @@ export default function NotFound() {
     <div>
       <h2>Not Found</h2>
       <p>Could not find requested resource</p>
-      <Link href={AppRoutes.SignIn}>Return Home</Link>
+      <Link href={AppRoutes.Welcome}>Return Home</Link>
     </div>
   )
 }

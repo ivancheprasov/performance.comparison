@@ -11,8 +11,8 @@ const items: MenuProps['items'] = [
     key: AppRoutes.Welcome,
   },
   {
-    label: <Link href={AppRoutes.SignIn}>Sign In</Link>,
-    key: AppRoutes.SignIn,
+    label: <Link href={AppRoutes.Form}>Form</Link>,
+    key: AppRoutes.Form,
   },
   {
     label: <Link href={AppRoutes.List}>List</Link>,

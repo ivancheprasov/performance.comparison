@@ -1,6 +1,6 @@
 export enum AppRoutes {
   Welcome = '/',
-  SignIn = '/sign-in',
+  Form = '/form',
   Table = '/table',
   List = '/list',
 }
