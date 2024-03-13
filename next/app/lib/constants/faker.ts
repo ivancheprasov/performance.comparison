@@ -1,3 +1,4 @@
+export const SMALL_DATA_COUNT = 10;
 export const DEFAULT_DATA_COUNT = 1000;
 export const SEED_NUMBER = 12345;
 

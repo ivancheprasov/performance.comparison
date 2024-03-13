@@ -1,7 +1,9 @@
 import { Reservation } from "../types/reservation";
+import { User, UserFormValues } from "../types/user";
 import { generateReservations } from "../utils/generate-reservations";
 import { generateUsers } from "../utils/generate-users";
-import { User, UserFormValues } from "../types/user";
+import { generateImages } from "../utils/generate-images";
+import { Image } from "../types/image";
 
 abstract class Api {
   public static async getReservations(): Promise<Reservation[]> {
@@ -22,7 +24,16 @@ abstract class Api {
     });
   }
 
-  public static async signIn(values: UserFormValues): Promise<void> {
+  public static async getImages(): Promise<Image[]> {
+    return new Promise((resolve) => {
+      const images = generateImages();
+      setTimeout(() => {
+        resolve(images);
+      }, 1000);
+    });
+  }
+
+  public static async signIn(_values: UserFormValues): Promise<void> {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve();

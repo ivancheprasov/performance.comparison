@@ -2,15 +2,15 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { List } from 'antd';
-import Api from '../lib/api/api';
 import Image from 'next/image';
 import VirtualList from 'rc-virtual-list';
 import avatarOne from '../../public/images/avatar-1.png';
 import avatarTwo from '../../public/images/avatar-2.png';
 import avatarThree from '../../public/images/avatar-3.png';
 import avatarFour from '../../public/images/avatar-4.png';
-import { User } from '../lib/types/user';
 import Loader from "../components/loader/loader";
+import Api from '../lib/api/api';
+import { User } from '../lib/types/user';
 import styles from "./users.module.scss";
 
 const AVATAR_ARRAY = [avatarOne, avatarTwo, avatarThree, avatarFour];
@@ -22,7 +22,7 @@ export default function Users() {
 
   return (
     <main>
-      <List itemLayout="horizontal" className={styles.list} header={<h1>Users</h1>}>
+      <List className={styles.list} header={<h1>Users</h1>}>
         <VirtualList data={users} height={600} itemKey='id' itemHeight={60}>
           {(item: User) => (
             <List.Item>

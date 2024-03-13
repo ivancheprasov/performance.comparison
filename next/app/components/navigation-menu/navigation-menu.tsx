@@ -22,6 +22,10 @@ const items: MenuProps['items'] = [
     label: <Link href={AppRoutes.Table}>Table</Link>,
     key: AppRoutes.Table,
   },
+  {
+    label: <Link href={AppRoutes.Gallery}>Gallery</Link>,
+    key: AppRoutes.Gallery,
+  },
 ];
 
 export default function NavigationMenu() {

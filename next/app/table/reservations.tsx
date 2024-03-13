@@ -6,8 +6,8 @@ import dayjs from 'dayjs';
 import Loader from '../components/loader/loader';
 import Api from '../lib/api/api';
 import { CLIENT_STANDARD_DATE, NO_SEARCH_RESULTS, SERVER_STANDARD_DATE, SORT_DIRECTIONS } from '../lib/constants/table';
-import styles from './reservations.module.scss';
 import { Reservation } from '../lib/types/reservation';
+import styles from './reservations.module.scss';
 
 export default function Reservations() {
   const { data: reservations, isFetching } = useQuery({ queryKey: ['getReservations'], queryFn: Api.getReservations });

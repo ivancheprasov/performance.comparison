@@ -3,4 +3,5 @@ export enum AppRoutes {
   Form = '/form',
   Table = '/table',
   List = '/list',
+  Gallery = '/gallery',
 }
