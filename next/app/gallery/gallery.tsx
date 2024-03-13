@@ -5,7 +5,7 @@ import { Card, List } from 'antd';
 import ImageComponent from 'next/image';
 import Loader from '../components/loader/loader';
 import Api from '../lib/api/api';
-import { IMAGE_HEIGHT, IMAGE_WIDTH } from '../lib/constants/image';
+import { IMAGE_HEIGHT, IMAGE_WIDTH, placeholderImageBase64 } from "../lib/constants/image";
 import { Image } from '../lib/types/image';
 import styles from './gallery.module.scss';
 
@@ -26,6 +26,8 @@ export default function Gallery() {
               width={IMAGE_WIDTH}
               height={IMAGE_HEIGHT}
               alt={`Picture-${index + 1}.`}
+              placeholder="blur"
+              blurDataURL={placeholderImageBase64}
             />
           </List.Item>
         )}

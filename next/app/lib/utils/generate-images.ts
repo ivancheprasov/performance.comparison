@@ -1,10 +1,7 @@
 import { faker } from '@faker-js/faker';
-import {
-  SEED_NUMBER,
-  SMALL_DATA_COUNT
-} from "../constants/faker";
-import { IMAGE_HEIGHT, IMAGE_WIDTH } from "../constants/image";
-import type { Image } from "../types/image";
+import { SEED_NUMBER, SMALL_DATA_COUNT } from '../constants/faker';
+import { IMAGE_HEIGHT, IMAGE_WIDTH } from '../constants/image';
+import type { Image } from '../types/image';
 
 faker.seed(SEED_NUMBER);
 
