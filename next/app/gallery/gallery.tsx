@@ -2,12 +2,12 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { Card, List } from 'antd';
+import ImageComponent from 'next/image';
 import Loader from '../components/loader/loader';
 import Api from '../lib/api/api';
-import styles from './gallery.module.scss';
-import ImageComponent from 'next/image';
-import { Image } from '../lib/types/image';
 import { IMAGE_HEIGHT, IMAGE_WIDTH } from '../lib/constants/image';
+import { Image } from '../lib/types/image';
+import styles from './gallery.module.scss';
 
 export default function Gallery() {
   const { data: images, isFetching } = useQuery({ queryKey: ['getImages'], queryFn: Api.getImages });

@@ -1,9 +1,9 @@
+import { Image } from "../types/image";
 import { Reservation } from "../types/reservation";
 import { User, UserFormValues } from "../types/user";
+import { generateImages } from "../utils/generate-images";
 import { generateReservations } from "../utils/generate-reservations";
 import { generateUsers } from "../utils/generate-users";
-import { generateImages } from "../utils/generate-images";
-import { Image } from "../types/image";
 
 abstract class Api {
   public static async getReservations(): Promise<Reservation[]> {

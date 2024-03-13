@@ -43,7 +43,15 @@
     "no-shadow": 0,
     "@typescript-eslint/no-shadow": "error",
     "no-unused-vars": 0,
-    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "react/no-danger": 0,
     "@typescript-eslint/no-explicit-any": "error",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }

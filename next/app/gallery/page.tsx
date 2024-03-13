@@ -1,8 +1,8 @@
+import Image from "next/image";
+import GalleryPreview from "../../public/images/gallery-preview.jpg";
 import NavigationMenu from "../components/navigation-menu/navigation-menu";
 import HydratedGallery from './hydrated-gallery';
 import styles from "./gallery.module.scss";
-import Image from "next/image";
-import GalleryPreview from "../../public/images/gallery-preview.jpg";
 
 export default function Page() {
   return (
