@@ -1,5 +1,6 @@
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 import type { ReactNode } from 'react';
-import React from "react";
+import React from 'react';
 
 export const metadata = {
   title: 'NextJS Performance Test',
@@ -10,7 +11,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        {children}
+        <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>
   );

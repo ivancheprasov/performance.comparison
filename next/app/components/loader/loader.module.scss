@@ -1,5 +1,5 @@
-.loader:global {
-  &.ant-spin-spinning {
+.loader {
+  &:global(.ant-spin-spinning) {
     position: relative;
     margin-top: 100px;
     left: 50vw;
@@ -9,10 +9,10 @@
       font-size: 120px !important;
     }
   }
-}
 
-.loader.centered {
-  position: absolute;
-  top: 50vh;
-  margin-top: unset;
+  &.centered {
+    position: absolute;
+    top: 50vh;
+    margin-top: 0;
+  }
 }

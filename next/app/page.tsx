@@ -1,5 +1,5 @@
-import NavigationMenu from "./components/navigation-menu/navigation-menu";
-import styles from "./page.module.scss";
+import NavigationMenu from './components/navigation-menu/navigation-menu';
+import styles from './page.module.scss';
 
 export default function Page() {
   return (

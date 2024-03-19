@@ -2,7 +2,9 @@ $gallery-preview-width: 1600px;
 $gallery-preview-height: 800px;
 
 .card {
-  margin: 50px auto;
+  &:global(.ant-card) {
+    margin: 50px auto;
+  }
   width: $gallery-preview-width;
 }
 
