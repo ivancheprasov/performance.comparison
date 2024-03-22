@@ -18,11 +18,11 @@ const AVATAR_ARRAY = [avatarOne, avatarTwo, avatarThree, avatarFour];
 export default function Users() {
   const { data: users, isFetching } = useQuery({ queryKey: ['getUsers'], queryFn: Api.getUsers });
 
-  if (isFetching || !users) return <Loader />
+  if (!users) return <Loader />
 
   return (
     <main>
-      <List className={styles.list} header={<h1>Users</h1>}>
+      <List className={styles.list} header={<h1>Users</h1>} loading={isFetching}>
         <VirtualList data={users} height={600} itemKey='id' itemHeight={60}>
           {(item: User) => (
             <List.Item>

@@ -1,3 +1,12 @@
-.card:global(.ant-card) {
-  margin: 0 50px;
+$table-width: 1405px;
+
+.card {
+  &:global(.ant-card) {
+    margin: 0 50px;
+  }
+
+  :global(.ant-table-wrapper) {
+    width: $table-width;
+    margin: auto;
+  }
 }

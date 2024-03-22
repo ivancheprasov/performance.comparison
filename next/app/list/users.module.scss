@@ -17,5 +17,9 @@
       height: 60px;
       padding: 10px 5px;
     }
+
+    .ant-spin-container div:first-child {
+      min-height: unset !important;
+    }
   }
 }

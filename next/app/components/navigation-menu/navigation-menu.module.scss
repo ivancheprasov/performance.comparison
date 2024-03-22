@@ -1,3 +1,10 @@
-.menu {
+$header-height: 46px;
+
+.menuWrapper {
+  height: $header-height;
+  border-bottom: 1px solid gray;
   margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
