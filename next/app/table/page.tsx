@@ -1,11 +1,11 @@
 import NavigationMenu from "../components/navigation-menu";
-import HydratedReservations from './hydrated-reservations';
+import HydratedTablePage from './hydrated-table-page';
 
 export default function Page() {
   return (
     <>
       <NavigationMenu />
-      <HydratedReservations />
+      <HydratedTablePage />
     </>
   );
 }

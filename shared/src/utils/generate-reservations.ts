@@ -8,8 +8,8 @@ faker.seed(SEED_NUMBER);
 
 export function generateReservations (length = DEFAULT_DATA_COUNT): Reservation[] {
   function getStatus () {
-    const myReservations = 'My Reservations';
-    const otherReservations = 'Other Reservations';
+    const myReservations = 'My ReservationTable';
+    const otherReservations = 'Other ReservationTable';
     const status = faker.helpers.arrayElement([myReservations, otherReservations]);
     return {
       status,

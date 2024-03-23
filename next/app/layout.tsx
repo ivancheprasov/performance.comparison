@@ -1,7 +1,7 @@
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import type { ReactNode } from 'react';
 import React from 'react';
-import "./styles/global.scss";
+import "shared-module/src/styles/global.scss";
 
 export const metadata = {
   title: 'NextJS Performance Test',

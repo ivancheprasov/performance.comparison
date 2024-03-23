@@ -1,0 +1,25 @@
+.list {
+  width: 500px;
+  border: 1px solid rgba(5, 5, 5, 0.06);
+
+  &:global(.ant-list) {
+    margin: 0 calc((100vw - 500px)/2);
+  }
+
+  :global {
+    .ant-list-header h1 {
+      font-size: 20px;
+      padding-left: 10px;
+      margin: 0;
+    }
+
+    .ant-list-item {
+      height: 60px;
+      padding: 10px 5px !important;
+    }
+
+    .ant-spin-container div:first-child {
+      min-height: unset !important;
+    }
+  }
+}

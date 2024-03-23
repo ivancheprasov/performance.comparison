@@ -1,11 +1,11 @@
 import NavigationMenu from "../components/navigation-menu";
-import SignInForm from "./sign-in-form";
+import FormPageContent from "./form-page-content";
 
 export default function Page() {
   return (
     <>
       <NavigationMenu />
-      <SignInForm />
+      <FormPageContent />
     </>
   );
 }

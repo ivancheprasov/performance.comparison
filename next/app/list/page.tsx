@@ -1,11 +1,11 @@
 import NavigationMenu from "../components/navigation-menu";
-import HydratedUsers from './hydrated-users';
+import HydratedListPage from './hydrated-list-page';
 
 export default function Page() {
   return (
     <>
       <NavigationMenu />
-      <HydratedUsers />
+      <HydratedListPage />
     </>
   );
 }
