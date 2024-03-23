@@ -5,6 +5,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  transpilePackages: ['shared-module'],
   images: {
     remotePatterns: [
       {
@@ -16,4 +17,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;

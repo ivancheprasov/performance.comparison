@@ -3,10 +3,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { Card, List } from 'antd';
 import ImageComponent from 'next/image';
-import Loader from '../components/loader/loader';
-import Api from '../lib/api/api';
-import { IMAGE_HEIGHT, IMAGE_WIDTH, placeholderImageBase64 } from "../lib/constants/image";
-import { Image } from '../lib/types/image';
+import Api from 'shared-module/src/api/api';
+import Loader from 'shared-module/src/components/loader';
+import { IMAGE_HEIGHT, IMAGE_WIDTH, placeholderImageBase64 } from "shared-module/src/constants/image";
+import { Image } from 'shared-module/src/types/image';
 import styles from './gallery.module.scss';
 
 export default function Gallery() {

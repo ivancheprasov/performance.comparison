@@ -1,7 +1,7 @@
 'use server'
 
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
-import Api from "../lib/api/api";
+import Api from "shared-module/src/api/api";
 import getQueryClient from '../lib/utils/get-query-client';
 import Users from "./users";
 

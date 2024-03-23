@@ -2,11 +2,11 @@
 
 import { useMutation } from '@tanstack/react-query';
 import { Button, Card, Form, Input, notification } from 'antd';
-import Api from '../lib/api/api';
-import { REQUIRED_FIELD } from '../lib/constants/rule';
-import { NotificationTypes } from '../lib/types/notification';
-import { UserFormValues } from '../lib/types/user';
-import { capitalizeFirstLetter } from '../lib/utils/string';
+import Api from 'shared-module/src/api/api';
+import { REQUIRED_FIELD } from 'shared-module/src/constants/rule';
+import { NotificationTypes } from 'shared-module/src/types/notification';
+import { UserFormValues } from 'shared-module/src/types/user';
+import { capitalizeFirstLetter } from 'shared-module/src/utils/string';
 import styles from './sign-in-form.module.scss';
 
 const INITIAL_FORM_VALUE: UserFormValues = {

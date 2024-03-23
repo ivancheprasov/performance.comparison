@@ -3,9 +3,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { Card, Table } from 'antd';
 import dayjs from 'dayjs';
-import Api from '../lib/api/api';
-import { CLIENT_STANDARD_DATE, NO_SEARCH_RESULTS, SERVER_STANDARD_DATE, SORT_DIRECTIONS } from '../lib/constants/table';
-import { Reservation } from '../lib/types/reservation';
+import Api from 'shared-module/src/api/api';
+import { CLIENT_STANDARD_DATE, NO_SEARCH_RESULTS, SERVER_STANDARD_DATE, SORT_DIRECTIONS } from 'shared-module/src/constants/table';
+import { Reservation } from 'shared-module/src/types/reservation';
 import styles from './reservations.module.scss';
 
 export default function Reservations() {

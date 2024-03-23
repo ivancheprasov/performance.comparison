@@ -1,5 +1,7 @@
 export enum AppRoutes {
   Welcome = '/',
-  SignIn = '/sign-in',
-  Main = '/main',
+  Form = '/form',
+  Table = '/table',
+  List = '/list',
+  Gallery = '/gallery',
 }

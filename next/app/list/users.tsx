@@ -4,13 +4,13 @@ import { useQuery } from '@tanstack/react-query';
 import { List } from 'antd';
 import Image from 'next/image';
 import VirtualList from 'rc-virtual-list';
+import Api from 'shared-module/src/api/api';
+import Loader from "shared-module/src/components/loader";
+import { User } from 'shared-module/src/types/user';
 import avatarOne from '../../public/images/avatar-1.png';
 import avatarTwo from '../../public/images/avatar-2.png';
 import avatarThree from '../../public/images/avatar-3.png';
 import avatarFour from '../../public/images/avatar-4.png';
-import Loader from "../components/loader/loader";
-import Api from '../lib/api/api';
-import { User } from '../lib/types/user';
 import styles from "./users.module.scss";
 
 const AVATAR_ARRAY = [avatarOne, avatarTwo, avatarThree, avatarFour];

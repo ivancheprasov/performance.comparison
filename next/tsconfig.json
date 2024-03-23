@@ -37,7 +37,7 @@
     ]
   },
   "include": [
-    "app/lib/types/index.d.ts",
+    "../shared/src/types/index.d.ts",
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "**/*.ts",

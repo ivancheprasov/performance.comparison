@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AppRoutes } from "./lib/types/routes";
+import { AppRoutes } from "shared-module/src/types/routes";
 
 export default function NotFound() {
   return (

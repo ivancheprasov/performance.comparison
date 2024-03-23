@@ -3,7 +3,7 @@
 import { Menu, MenuProps } from "antd";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AppRoutes } from "../../../lib/types/routes";
+import { AppRoutes } from "shared-module/src/types/routes";
 import styles from "./navigation-items.module.scss";
 
 const items: MenuProps['items'] = [
