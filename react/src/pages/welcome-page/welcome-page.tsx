@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
-import { AppRoutes } from "../../types/routes";
+import NavigationMenu from "components/navigation-menu";
+import styles from "./welcome-page.module.scss";
 
 export default function WelcomePage() {
   return (
-    <div>
-      <h1>Welcome</h1>
-      <Link to={AppRoutes.SignIn}>Sign In</Link>
-    </div>
+    <>
+      <NavigationMenu />
+      <main>
+        <h1 className={styles.header}>Welcome</h1>
+        <p className={styles.subHeader}>Feel free to explore the navigation menu</p>
+      </main>
+    </>
   );
 }

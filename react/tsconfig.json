@@ -9,13 +9,14 @@
     "outDir": "./dist",
     "skipLibCheck": true,
     // Alias
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "*": ["./src/*"],
       "test-utils": ["./test-utils.tsx"],
       "__mocks__/*": ["./__mocks__/*"],
       "__mocks-data__/*": ["./__mocks-data__/*"]
     },
+    "allowImportingTsExtensions": true,
     // Strict type checking
     "strict": true,
     "noImplicitAny": true,
@@ -36,5 +37,10 @@
       }
     ]
   },
+  "include": [
+    "../shared/src/types/index.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+  ],
   "exclude": ["node_modules"]
 }
