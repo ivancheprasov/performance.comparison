@@ -1,5 +1,5 @@
 import { ComponentType } from "react";
-import { Avatar, Image as AntdImage } from "antd";
+import { Avatar, AvatarProps, Image as AntdImage, ImageProps } from "antd";
 
 interface StaticImageData {
   src: string;
@@ -24,6 +24,8 @@ interface NextImageProps {
   placeholder?: 'blur' | 'empty' | `data:image/${string}`;
   blurDataURL?: string;
 }
+
+export type ImageComponentProps = Pick<NextImageProps, 'placeholder' | 'blurDataURL' | 'width' | 'height'>;
 
 export type ImageComponent = ComponentType<NextImageProps> | typeof Avatar | typeof AntdImage;
 

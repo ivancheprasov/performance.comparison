@@ -2,18 +2,23 @@
 
 import { Card, List } from 'antd';
 import Loader from '../../components/loader';
-import { IMAGE_HEIGHT, IMAGE_WIDTH, placeholderImageBase64 } from '../../constants/image';
-import { Image } from '../../types/image';
+import { Image, ImageComponentProps } from '../../types/image';
 import styles from './gallery.module.scss';
 import { ImageComponent } from '../../types/image';
 
 interface GalleryProps {
   imageComponent: ImageComponent;
+  imageComponentProps?: ImageComponentProps;
   data?: Image[];
   isFetching: boolean;
 }
 
-export default function Gallery({ data: images, imageComponent: ImageComponent, isFetching }: GalleryProps) {
+export default function Gallery({
+  data: images,
+  imageComponent: ImageComponent,
+  isFetching,
+  imageComponentProps = {},
+}: GalleryProps) {
   if (isFetching) return <Loader isRelative />;
 
   return (
@@ -25,11 +30,8 @@ export default function Gallery({ data: images, imageComponent: ImageComponent, 
           <List.Item>
             <ImageComponent
               src={item.url}
-              width={IMAGE_WIDTH}
-              height={IMAGE_HEIGHT}
               alt={`Picture-${index + 1}.`}
-              placeholder="blur"
-              blurDataURL={placeholderImageBase64}
+              {...imageComponentProps}
             />
           </List.Item>
         )}
