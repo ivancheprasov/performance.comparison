@@ -9,13 +9,12 @@ import avatarTwo from '../../../public/images/avatar-2.png';
 import avatarThree from '../../../public/images/avatar-3.png';
 import avatarFour from '../../../public/images/avatar-4.png';
 import styles from './user-list.module.scss';
-import { ComponentType } from 'react';
-import { ImageProps } from '../../types/image';
+import { ImageComponent } from '../../types/image';
 
 const AVATAR_ARRAY = [avatarOne, avatarTwo, avatarThree, avatarFour];
 
 interface UserListProps {
-  avatarComponent: ComponentType<ImageProps>;
+  avatarComponent: ImageComponent;
   data?: User[];
   isFetching: boolean;
 }

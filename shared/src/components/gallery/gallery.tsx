@@ -5,11 +5,10 @@ import Loader from '../../components/loader';
 import { IMAGE_HEIGHT, IMAGE_WIDTH, placeholderImageBase64 } from '../../constants/image';
 import { Image } from '../../types/image';
 import styles from './gallery.module.scss';
-import { ComponentType } from 'react';
-import { ImageProps } from '../../types/image';
+import { ImageComponent } from '../../types/image';
 
 interface GalleryProps {
-  imageComponent: ComponentType<ImageProps>;
+  imageComponent: ImageComponent;
   data?: Image[];
   isFetching: boolean;
 }

@@ -1,4 +1,7 @@
-export interface StaticImageData {
+import { ComponentType } from "react";
+import { Avatar, Image as AntdImage } from "antd";
+
+interface StaticImageData {
   src: string;
   height: number;
   width: number;
@@ -6,21 +9,25 @@ export interface StaticImageData {
   blurWidth?: number;
   blurHeight?: number;
 }
-export interface StaticRequire {
+
+interface StaticRequire {
   default: StaticImageData;
 }
-export type StaticImport = StaticRequire | StaticImageData;
 
-export interface Image {
-  id: string;
-  url: string;
-}
+type StaticImport = StaticRequire | StaticImageData;
 
-export interface ImageProps {
+interface NextImageProps {
   src: string | StaticImport;
   alt: string;
   width?: number | `${number}`;
   height?: number | `${number}`;
   placeholder?: 'blur' | 'empty' | `data:image/${string}`;
   blurDataURL?: string;
+}
+
+export type ImageComponent = ComponentType<NextImageProps> | typeof Avatar | typeof AntdImage;
+
+export interface Image {
+  id: string;
+  url: string;
 }
