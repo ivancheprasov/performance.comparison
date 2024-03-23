@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import styles from "./navigation-menu.module.scss";
 
-const NavigationItems = dynamic(() => import("./navigation-items/navigation-items"), {
+const NavigationItems = dynamic(() => import("./navigation-items"), {
   suspense: true,
   loading: () => <span>Loading...</span>
 });
