@@ -25,3 +25,5 @@ export function generateUsers(length = DEFAULT_DATA_COUNT): User[] {
     ...getPersonInfo(),
   }));
 }
+
+export const GENERATED_USERS = generateUsers();

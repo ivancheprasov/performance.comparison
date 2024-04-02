@@ -29,3 +29,5 @@ export function generateReservations (length = DEFAULT_DATA_COUNT): Reservation[
     ...getStatus(),
   }));
 }
+
+export const GENERATED_RESERVATIONS = generateReservations();

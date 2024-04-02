@@ -11,3 +11,5 @@ export function generateImages(length = SMALL_DATA_COUNT): Image[] {
     url: faker.image.urlLoremFlickr({ width: IMAGE_WIDTH, height: IMAGE_HEIGHT, category: 'nature' }),
   }));
 }
+
+export const GENERATED_IMAGES = generateImages();
